@@ -1,0 +1,180 @@
+@import "../config.scss";
+@import "../media.scss";
+
+.header {
+    margin-top: 35px;
+    @include max576 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    &__logo-text {
+        color: $main-text-color;
+    }
+    // &__btn {
+    //     margin-left: 274px;
+    //     @include max1670 {
+    //         margin-left: 465px;
+    //     }
+    //     @include max1450 {
+    //         margin-left: 410px;
+    //     }
+    //     @include max1250 {
+    //         margin-left: 362px;
+    //     }
+    //     @include max1050 {
+    //         margin-left: 224px;
+    //     }
+    //     @include max800 {
+    //         display: none;
+    //     }
+    // }
+}
+
+.header-section {
+    // overflow: unset;
+    margin-top: 180px;
+    padding-bottom: 80px;
+    @include max800 {
+        padding-bottom: 40px;
+    }
+    @include max576 {
+        margin-top: 0px;
+    }
+    &__heading {
+        @include max576 {
+            margin-top: 104px;
+        }
+    }
+    &__title {
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 40px;
+        margin-top: 45px;
+        @include max576 {
+            font-size: 32px;
+            margin-top: 0px;
+        }
+        @include max360 {
+            font-size: 28px;
+        }
+    }
+}
+
+.article {
+    position: relative;
+    &__img {
+        position: absolute;
+        top: 0;
+        right: -18%;
+        @include max1450 {
+            right: -14%;
+        }
+        @include max1250 {
+            right: -18%;
+        }
+        @include max1050 {
+            width: 54%;
+            height: auto;
+            top: 9%;
+            right: -13%;
+        }
+        @include max800 {
+            width: 90%;
+            position: unset;
+            display: block;
+            margin: 0 auto;
+        }
+        @include max576 {
+            width: 100%;
+        }
+    }
+    &__title {
+        width: 55%;
+        @include max800 {
+            width: 80%;
+            margin-top: 40px;
+        }
+        @include max576 {
+            width: 100%;
+        }
+    }
+    &__tags {
+        margin-top: 40px;
+        @include max576 {
+            margin-top: 25px;
+        }
+    }
+    &__first-paragraph {
+        margin-top: 80px;
+        width: 55%;
+        margin-bottom: 40px;
+        @include max800 {
+            width: 100%;
+        }
+        @include max576 {
+            margin-top: 40px;
+        }
+    }
+    // &__paragraph {
+    //     margin-top: 40px;
+    // }
+    &__descr {
+        margin-top: 40px;
+        display: flex;
+    }
+    &__text {
+        margin-left: 63px;
+        @include max1250 {
+            margin-left: 40px;
+        }
+        @include max576 {
+            margin-left: 20px;
+        }
+    }
+    &__main-text {
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 37px;
+        margin: 40px 0;
+        @include max576 {
+            font-size: 23px;
+        }
+    }
+    &__list {
+        margin: 45px 0px;
+        padding-left: 114px;
+        @include max576 {
+            padding-left: 60px;
+        }
+    }
+    &__list-item {
+        font-size: 16px;
+        line-height: 22px;
+        position: relative;
+        margin-bottom: 36px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        &::before {
+            content: "";
+            display: inline-block;
+            background: url(../../img/check-icon.svg) no-repeat;
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            top: 0%;
+            left: -39px;
+            @include max360 {
+                left: -19%;
+            }
+        }
+    }
+    &__subtitle {
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+}
+.spec-photos {
+    margin: 90px 0;
+    overflow: unset;
+}

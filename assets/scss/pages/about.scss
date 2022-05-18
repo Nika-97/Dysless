@@ -1,0 +1,109 @@
+@import "../config.scss";
+@import "../media.scss";
+
+
+.header {
+    margin-top: 35px;
+    @include max576 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    &__logo-text {
+        color: $main-text-color;
+    }
+}
+
+.about-center {
+    margin-top: 180px;
+    padding-bottom: 140px;
+    @include max576 {
+        margin-top: 64px;
+    }
+    &__heading-block {
+        flex-wrap: wrap;
+        margin-top: 30px;
+        @include max800 {
+            margin-top: 15px;
+        }
+        @include max576 {
+            flex-direction: column;
+            margin-top: 30px;
+        }
+    }
+    &__heading {
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 56px;
+        @include max576 {
+            margin-top: 0;
+        }
+    }
+    &__descr {
+        @include max800 {
+            margin-top: 18px;
+        }
+    }
+    &__info {
+        @include max576 {
+            margin-top: 190px;
+        }
+        @include max360 {
+            margin-top: 117px;
+        }
+    }
+    &__abilities {
+        margin-bottom: 100px;
+    }
+    &__for-diagnostics {
+        margin-top: 100px;
+    }
+}
+
+.sign-for-diagnostics {
+    &__btn {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.quote-info {
+    padding-bottom: 140px;
+    position: relative;
+    padding-left: 0px;
+    &__content {
+        display: flex;
+        @include max576 {
+            flex-wrap: wrap;
+        }
+    }
+    &__img {
+        position: relative;
+        @include max800 {
+            top: 90px;
+            height: fit-content;
+        }
+    }
+    &__quotes {
+        @include max576 {
+            top: 50%;
+            left: 1%;
+        }
+        @include max360 {
+            top: 42%;
+        }
+    }
+    &__descr {
+        width: 50%;
+        margin-left: -51px;
+        margin-top: 55px;
+        @include max576 {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 75px;
+        }
+    }
+}
+
+.feedback {
+    padding-top: 140px;
+}

@@ -1,0 +1,502 @@
+@import "../config.scss";
+@import "../media.scss";
+
+.header {
+    margin-top: 35px;
+    // margin-bottom: 58px;
+    @include max576 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+.main-section {
+    background: url(../../img/main-page/DYSLESS-letters-1.svg) 51% 84% no-repeat,
+        url(../../img/main-section-children1.png) 7% 0% no-repeat, $lightpink;
+    padding-top: 124px;
+    overflow: unset;
+    @include max1670 {
+        background: url(../../img/main-page/DYSLESS-letters-1.svg) 51% 84% no-repeat,
+            url(../../img/main-section-children1-1240.png) 13% 0% no-repeat, $lightpink;
+    }
+    @include max1450 {
+        background-position: 51% 84%, 6% 0%;
+    }
+    @include max1250 {
+        background-position: 51% 84%, 0% 0%;
+    }
+    @include max1050 {
+        background: url(../../img/main-page/DYSLESS-letters-1.svg) 51% 91% no-repeat, $lightpink;
+    }
+    @include max800 {
+        background: $lightpink;
+    }
+    @include max576 {
+        padding-top: 0;
+    }
+    .container {
+        width: 1722px;
+        @include max1670 {
+            width: 1240px;
+        }
+    }
+    &__content {
+        margin-top: 141px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        @include max1050 {
+            justify-content: flex-start;
+            margin-top: 85px;
+        }
+        @include max800 {
+            margin-top: 105px;
+        }
+        @include max576 {
+            margin-top: 180px;
+        }
+    }
+    &__img {
+        display: none;
+        @include max1050 {
+            display: block;
+            width: 100%;
+            margin-top: 60px;
+        }
+        @include max800 {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 38%;
+        }
+        @include max576 {
+            top: 43%;
+        }
+        @include max360 {
+            top: 47%;
+        }
+    }
+    &__stat {
+        margin: 0 auto;
+    }
+}
+
+// MAIN-SECTION__INFO
+.info {
+    position: relative;
+    width: 42%;
+    @include max1670 {
+        width: 43%;
+    }
+    @include max1450 {
+        width: 47.5%;
+    }
+    @include max1250 {
+        width: 46%;
+        margin-right: -19px;
+    }
+    @include max1050 {
+        margin-right: 0;
+        width: 64%;
+        padding-left: 100px;
+    }
+    @include max800 {
+        padding-left: 40px;
+        width: 75%;
+    }
+    @include max576 {
+        padding-left: 0;
+        width: 100%;
+    }
+    &__quotes {
+        position: absolute;
+        top: -1%;
+        right: 0%;
+        @include max1050 {
+            top: 6%;
+            right: -14%;
+            left: unset;
+        }
+        @include max800 {
+            top: -10%;
+            right: -2%;
+        }
+        @include max576 {
+            right: 84%;
+            width: 20%;
+        }
+    }
+    &__heading {
+        margin-left: 0px;
+        width: 100%;
+        font-weight: 800;
+        font-size: 64px;
+        line-height: 90px;
+        text-transform: uppercase;
+        margin-top: 20px;
+        @include max1670 {
+            font-size: 50px;
+            line-height: 70px;
+        }
+        @include max1250 {
+            font-size: 48px;
+        }
+        @include max1050 {
+            font-size: 50px;
+        }
+        @include max800 {
+            font-size: 40px;
+            line-height: 56px;
+        }
+        @include max576 {
+            font-size: 32px;
+            line-height: 55px;
+            width: 104%;
+        }
+        @include max360 {
+            font-size: 28px;
+        }
+    }
+    &__note {
+        margin-top: 20px;
+        text-align: left;
+        font-size: 16px;
+        @include max800 {
+            display: none;
+        }
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 20px;
+        @include max1050 {
+            width: 90%;
+        }
+        @include max800 {
+            width: 100%;
+        }
+    }
+    &__for-diagnostics {
+        margin-top: 90px;
+        width: min-content;
+        @include max1250 {
+            margin-top: 65px;
+        }
+        @include max576 {
+            width: auto;
+            margin-top: 40px;
+        }
+    }
+    .sign-for-diagnostics__btn {
+        width: 384px;
+        @include max576 {
+            width: 90%;
+        }
+    }
+}
+
+// MAIN-SECTION__STAT
+.stat {
+    background: #fff;
+    border: 1px solid $yellow;
+    border-radius: 40px;
+    box-shadow: 0px 48px 120px rgba(187, 187, 187, 0.25);
+    padding: 45px 52px 45px 52px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 103px;
+    margin-top: 141px;
+    width: 66%;
+    @include max1670 {
+        width: 90%;
+    }
+    @include max1050 {
+        width: 85%;
+    }
+    @include max800 {
+        top: 140px;
+        margin-top: 650px;
+        width: 100%;
+        padding-right: 35px;
+        padding-left: 35px;
+    }
+    @include max576 {
+        flex-wrap: wrap;
+        top: 220px;
+        margin-top: 220px;
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+    @include max360 {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-top: 180px;
+    }
+    &__item {
+        width: 29%;
+        text-align: center;
+        @include max576 {
+            width: 100%;
+            margin-bottom: 20px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__num {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 40px;
+        @include max800 {
+            font-size: 38px;
+        }
+    }
+    &__text {
+        margin-top: 12px;
+        line-height: 30px;
+        @include max800 {
+            font-size: 16px;
+        }
+    }
+}
+
+.quote-section {
+    padding-top: 223px;
+    padding-bottom: 141px;
+    @include max576 {
+        padding-top: 270px;
+        padding-bottom: 80px;
+    }
+    &__descr {
+        margin-top: 60px;
+        display: flex;
+        @include max360 {
+            margin-top: 35px;
+        }
+    }
+    &__text {
+        margin-left: 63px;
+        @include max1250 {
+            margin-left: 40px;
+        }
+        @include max576 {
+            margin-left: 20px;
+        }
+    }
+    &__info {
+        margin-top: 100px;
+        @include max576 {
+            margin-top: 40px;
+        }
+    }
+}
+
+.about-dyslexia {
+    padding: 140px 0px 145px 0px;
+    @include max576 {
+        padding: 80px 0;
+    }
+    &__heading-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include max576 {
+            flex-direction: column-reverse;
+            align-items: flex-end;
+        }
+    }
+    &__heading {
+        @include max800 {
+            width: 44%;
+        }
+        @include max576 {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+    &__descr {
+        display: flex;
+        margin-top: 60px;
+        @include max576 {
+            margin-top: 45px;
+        }
+    }
+    &__text {
+        margin-left: 60px;
+        @include max1250 {
+            margin-left: 40px;
+        }
+        @include max576 {
+            margin-left: 20px;
+        }
+    }
+    &__signs {
+        margin-top: 80px;
+        @include max576 {
+            margin-top: 40px;
+        }
+    }
+}
+
+.dyslexia-signs {
+    padding: 57px 173px 64px 129px;
+    background: url(../../img/main-page/dyslexia-signs-bg.png) no-repeat;
+    // border-radius: 40px;
+    @include max1250 {
+        padding-right: 80px;
+        padding-left: 100px;
+        padding-bottom: 48px;
+    }
+    @include max1050 {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+    @include max800 {
+        background-size: cover;
+    }
+    @include max576 {
+        padding: 33px;
+    }
+    &__text {
+        margin-top: 29px;
+    }
+    &__items {
+        margin-top: 56px;
+        @include max576 {
+            margin-top: 29px;
+        }
+    }
+    &__tabs-wrap {
+        display: flex;
+        width: 54%;
+        justify-content: space-between;
+        @include max1050 {
+            width: 62%;
+        }
+        @include max800 {
+            width: 100%;
+        }
+        @include max576 {
+            flex-wrap: wrap;
+            width: 50%;
+        }
+    }
+    &__tab {
+        cursor: pointer;
+        margin-bottom: 6px;
+        &.active {
+            border-bottom: 4px solid $pink;
+        }
+        @include max576 {
+            margin-bottom: 12px;
+        }
+    }
+    &__content-wrap {
+        margin-top: 63px;
+        @include max576 {
+            width: 91%;
+        }
+    }
+    &__list {
+        column-gap: 20px;
+        column-count: 2;
+        @include max800 {
+            column-gap: 70px;
+        }
+        @include max576 {
+            column-count: 1;
+        }
+    }
+    &__content-item {
+        line-height: 22px;
+        margin-bottom: 13px;
+        position: relative;
+        margin-left: 37px;
+        width: 64%;
+        &::before {
+            content: "";
+            display: inline-block;
+            background: url(../../img/check-icon.svg) no-repeat;
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            top: 0%;
+            left: -13%;
+            @include max360 {
+                left: -19%;
+            }
+        }
+        @include max800 {
+            width: 100%;
+        }
+        @include max576 {
+            font-size: 14px;
+        }
+    }
+}
+
+.faq {
+    padding-bottom: 140px;
+    &__heading-block {
+        display: flex;
+        justify-content: space-between;
+        @include max576 {
+            flex-direction: column-reverse;
+        }
+        h2 {
+            @include max576 {
+                margin-top: 30px;
+            }
+        }
+    }
+    &__accordion {
+        margin-top: 80px;
+        @include max576 {
+            margin-top: 50px;
+        }
+    }
+}
+
+.diagnostics {
+    padding-top: 75px;
+    padding-bottom: 46px;
+    background: url(../../img/main-page/diagnostics-bg.png) 50% 0% no-repeat;
+    @include max1670 {
+        background-position-x: 60%;
+    }
+    @include max1450 {
+        background: url(../../img/main-page/diagnostics-bg-1440.png) no-repeat;
+        background-size: cover;
+    }
+    @include max1250 {
+        background-position-x: 50%;
+    }
+    @include max576 {
+        background-position-x: 75%;
+        background-size: 180%;
+        padding-top: 20px;
+    }
+    &__descr {
+        margin-top: 60px;
+        @include max576 {
+            margin-top: 130px;
+        }
+    }
+    &__text {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        margin-top: 60px;
+        @include max576 {
+            margin-top: 30px;
+        }
+    }
+    &__for-diagnostics {
+        margin-top: 93px;
+        width: min-content;
+        @include max576 {
+            width: auto;
+        }
+    }
+}

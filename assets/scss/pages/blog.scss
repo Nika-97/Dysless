@@ -1,0 +1,235 @@
+@import "../config.scss";
+@import "../media.scss";
+
+.header {
+    margin-top: 35px;
+    @include max576 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    &__logo-text {
+        color: $main-text-color;
+    }
+}
+
+.header-section {
+    overflow: unset;
+    margin-top: 180px;
+    padding-bottom: 60px;
+    @include max576 {
+        margin-top: 0px;
+    }
+    @include max360 {
+        padding-bottom: 35px;
+    }
+    &__heading {
+        @include max576 {
+            margin-top: 104px;
+        }
+    }
+    &__title {
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 40px;
+        margin-top: 45px;
+        @include max800 {
+            line-height: 44px;
+        }
+        @include max576 {
+            font-size: 32px;
+            margin-top: 0px;
+        }
+    }
+}
+
+.blog {
+    flex-wrap: wrap;
+    &__headline {
+        width: 100%;
+        background-color: $mint;
+        display: flex;
+        height: 112px;
+        padding: 31px 690px 31px 330px;
+        justify-content: space-between;
+        align-items: center;
+        @include max1670 {
+            padding-right: 534px;
+            padding-left: 170px;
+        }
+        @include max1450 {
+            padding-right: 460px;
+            padding-left: 100px;
+        }
+        @include max1250 {
+            padding-right: 265px;
+            padding-left: 48px;
+        }
+        @include max1050 {
+            padding-right: 113px;
+            padding-left: 25px;
+        }
+        @include max576 {
+            padding: 31px 18px;
+        }
+        @include max360 {
+            padding: 10px 18px;
+            flex-wrap: wrap;
+            height: 140px;
+        }
+    }
+    &__headline-nav {
+        display: flex;
+        .prev-btn {
+            transform: rotate(180deg);
+            margin-right: 40px;
+            &:hover {
+                box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.17);
+            }
+            @include max576 {
+                margin-right: 20px;
+            }
+            @include max360 {
+                width: 45px;
+                height: 45px;
+            }
+        }
+        .next-btn {
+            @include max360 {
+                width: 45px;
+                height: 45px;
+            }
+        }
+    }
+}
+
+.popular-articles {
+    margin-top: 74px;
+    display: flex;
+    position: relative;
+    padding-bottom: 140px;
+    @include max800 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @include max576 {
+        padding-bottom: 90px;
+    }
+    @include max360 {
+        margin-top: 20px;
+    }
+    &__descr {
+        width: 55%;
+        @include max800 {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+    }
+    &__tags {
+        margin-top: 40px;
+        @include max576 {
+            margin-top: 25px;
+        }
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        right: -18%;
+        @include max1250 {
+            top: 4%;
+            right: -25%;
+        }
+        @include max1050 {
+            width: 65%;
+            height: auto;
+            top: 7%;
+        }
+        @include max800 {
+            width: 95%;
+            position: unset;
+        }
+    }
+    &__text {
+        margin-top: 80px;
+        @include max576 {
+            margin-top: 50px;
+        }
+    }
+    &__more-info {
+        margin-top: 33px;
+    }
+}
+
+
+
+.blog-preview {
+    padding-bottom: 130px;
+    @include max576 {
+        padding-bottom: 90px;
+    }
+    &__pre-articles {
+        margin-top: 80px;
+        @include max576 {
+            margin-top: 50px;
+        }
+    }
+    &__pagination {
+        margin-top: 40px;
+    }
+}
+
+.pre-articles {
+    flex-wrap: wrap;
+    &__item {
+        margin-bottom: 40px;
+        &:nth-child(3) {
+            margin-right: 0px;
+        }
+        @include max1250 {
+            width: 340px;
+        }
+        @include max1050 {
+            width: 311px;
+        }
+        @include max800 {
+            width: 70%;
+            margin-right: 0;
+        }
+        @include max576 {
+            width: 95%;
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    &__item {
+        border: 1px solid #001a49;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-right: 10px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &.active {
+            background-color: $mint;
+            border: 1px solid $mint;
+        }
+        &:hover {
+            background-color: $mint;
+            border: 1px solid $mint;
+            box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.12);
+            transition: 0.15s;
+        }
+    }
+}

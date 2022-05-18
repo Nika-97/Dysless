@@ -1,0 +1,403 @@
+@import "../config.scss";
+@import "../media.scss";
+
+.header {
+    margin-top: 35px;
+    margin-bottom: 58px;
+    @include max576 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    &__logo-text {
+        color: $main-text-color;
+    }
+}
+
+.main-section {
+    background: url(../../img/course-DYSLESS-letters.svg) 50% 75% no-repeat,
+        radial-gradient(68% 68% at 50% 35%, $lightpink 0%, rgba(251, 192, 188, 0) 100%);
+    padding-top: 135px;
+    overflow: unset;
+    @include max1450 {
+        background: url(../../img/course-DYSLESS-letters.svg) 50% 75% no-repeat,
+            url(../../img/course-page-children.png) 116% 26% no-repeat,
+            radial-gradient(68% 68% at 50% 35%, $lightpink 0%, rgba(251, 192, 188, 0) 100%);
+    }
+    @include max1250 {
+        background-position: 50% 75%, 135% 26%;
+    }
+    @include max1050 {
+        background-position: 50% 75%, 169% 31%;
+    }
+    @include max800 {
+        background-position: 50% 46%, 50% 77%;
+        background-size: 90%, auto;
+    }
+    @include max576 {
+        padding-top: 0px;
+        background-position: 50% 47%, 32% 72%;
+    }
+    @include max360 {
+        background-position: 50% 50%, 36% 72%;
+    }
+    &__content {
+        padding-top: 90px;
+        position: relative;
+        @include max576 {
+            padding-top: 125px;
+        }
+    }
+    &__img {
+        position: absolute;
+        top: 7%;
+        right: -18%;
+        @include max1670 {
+            right: -7%;
+        }
+        @include max1450 {
+            display: none;
+        }
+    }
+}
+
+.course-info {
+    width: 49%;
+    @include max800 {
+        width: 100%;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 56px;
+        @include max576 {
+            font-size: 38px;
+        }
+    }
+    &__heading {
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 56px;
+        margin-top: 5px;
+        @include max576 {
+            font-size: 38px;
+        }
+    }
+    &__text {
+        margin-top: 18px;
+    }
+    &__summary {
+        margin-top: 67px;
+        display: flex;
+        justify-content: space-between;
+        @include max360 {
+            flex-wrap: wrap;
+        }
+        .summary-item-descr {
+            font-size: 16px;
+        }
+    }
+    &__btn {
+        margin-top: 54px;
+        width: 356px;
+        background-color: $mint;
+        @include max576 {
+            width: 100%;
+        }
+    }
+}
+
+.properties {
+    background: #fff;
+    border: 1px solid $lightpink;
+    border-radius: 40px;
+    box-shadow: 0px 48px 120px rgba(0, 26, 73, 0.1);
+    padding: 45px 40px 45px 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 258px;
+    width: 90%;
+
+    @include max800 {
+        margin-top: 800px;
+        width: 100%;
+        padding: 34px 22px 34px 10px;
+    }
+    @include max576 {
+        flex-wrap: wrap;
+        margin-top: 600px;
+    }
+    &__item {
+        width: 29%;
+        text-align: center;
+        @include max576 {
+            width: 100%;
+            margin-bottom: 20px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__title {
+        @include max800 {
+            font-size: 28px;
+        }
+    }
+    &__text {
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+.about-course {
+    padding-top: 90px;
+    &__descr {
+        margin: 60px 0px;
+        display: flex;
+    }
+    &__text {
+        margin-left: 70px;
+        @include max1250 {
+            margin-left: 40px;
+        }
+        @include max576 {
+            margin-left: 20px;
+        }
+    }
+    &__content-with-video {
+        margin-top: 75px;
+    }
+    &__registration {
+        margin: 0 auto;
+        margin-top: 100px;
+        width: min-content;
+        .text_small {
+            text-align: center;
+            margin-top: 25px;
+        }
+        @include max360 {
+            width: auto;
+        }
+    }
+    &__btn {
+        width: 356px;
+        background-color: $mint;
+        @include max360 {
+            width: 100%;
+        }
+    }
+}
+
+.content-with-video {
+    &__info-title {
+        font-weight: 700;
+        color: $lightpink;
+    }
+}
+
+.course-program {
+    padding-top: 60px;
+    padding-bottom: 105px;
+    margin-top: 100px;
+    background: url(../../img/course-prog-bg.png) no-repeat;
+    @include max1050 {
+        background-position: 75% 0%;
+    }
+    @include max1050 {
+        background-size: cover;
+    }
+    &__accordion {
+        margin-top: 80px;
+    }
+}
+
+.accordion {
+    &__item {
+        border: none;
+        margin-bottom: 30px;
+        padding: 30px 40px;
+        background: rgba(255, 255, 255, 0.9);
+        &.active {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding-bottom: 56px;
+        }
+        @include max800 {
+            width: 100%;
+            padding: 30px 20px;
+        }
+    }
+    &__heading-block {
+        align-items: center;
+        @include max576 {
+            flex-wrap: wrap;
+        }
+    }
+    &__headline {
+        margin-left: -130px;
+        width: 46%;
+        @include max1250 {
+            margin-left: -150px;
+        }
+        @include max1050 {
+            margin-left: -50px;
+            width: 50%;
+        }
+        @include max800 {
+            margin-left: 0px;
+        }
+        @include max576 {
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
+    &__addition {
+        display: flex;
+        align-items: center;
+        background: $lightpink;
+        border-radius: 33px;
+        padding: 13px 40px;
+        width: 282px;
+        @include max800 {
+            width: 36%;
+            padding: 13px 20px;
+        }
+        @include max576 {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .line {
+            border-left: 1px solid $main-text-color;
+            height: 30px;
+            margin: 0 25px;
+            // position: relative;
+            // top: 7px;
+        }
+    }
+    &__addition-text {
+        width: 45%;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    &__content {
+        display: none;
+    }
+    &__content-flex-block {
+        display: flex;
+        padding-left: 73px;
+        justify-content: space-between;
+        padding-top: 43px;
+        @include max800 {
+            padding-left: 20px;
+        }
+        @include max576 {
+            padding-left: 8px;
+            flex-wrap: wrap;
+            padding-top: 20px;
+        }
+    }
+    &__info {
+        width: 63%;
+        @include max576 {
+            width: 100%;
+        }
+    }
+    &__text {
+        width: auto;
+        margin-bottom: 25px;
+        &:last-of-type {
+            margin-bottom: 0px;
+        }
+    }
+    &__add-info {
+        width: 22.5%;
+        @include max1250 {
+            width: 25.5%;
+        }
+        @include max1050 {
+            width: 27.5%;
+        }
+        @include max800 {
+            width: 29%;
+        }
+        @include max576 {
+            width: 100%;
+            margin-top: 25px;
+            padding-left: 40px;
+        }
+    }
+    &__add-info-item {
+        margin-bottom: 35px;
+        position: relative;
+        font-size: 16px;
+        line-height: 22px;
+        &:last-of-type {
+            margin-bottom: 0px;
+        }
+        &::before {
+            content: "";
+            display: inline-block;
+            background: url(../../img/check-icon.svg) no-repeat;
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            top: -12%;
+            left: -40px;
+        }
+    }
+}
+
+.course-results {
+    padding-top: 140px;
+    @include max800 {
+        padding-top: 80px;
+    }
+    &__descr {
+        margin: 60px 0px;
+        display: flex;
+        @include max576 {
+            margin: 40px 0px;
+        }
+    }
+    &__text {
+        margin-left: 70px;
+        @include max1250 {
+            margin-left: 40px;
+        }
+        @include max576 {
+            margin-left: 20px;
+        }
+    }
+    &__main-text {
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 37px;
+        @include max576 {
+            font-size: 23px;
+        }
+    }
+    &__abilities {
+        margin-top: 60px;
+        margin-bottom: 138px;
+    }
+}
+
+.take-dyslexia-test {
+    margin-top: 180px;
+    @include max576 {
+        margin-top: 80px;
+    }
+}
+
+.courses {
+    padding-top: 140px;
+    @include max800 {
+        padding-top: 80px;
+    }
+}
+
+.blog-preview {
+    @include max800 {
+        padding: 80px 0px;
+    }
+}
